@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link href="styles/reseter.css" rel="stylesheet">
+    <link href="styles/index.css" rel="stylesheet">
+    <link href="styles/navigation.css" rel="stylesheet">
+    <script src="javascript/nav.js"></script>
+    <title>OnCo - Home</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navigation-bar">
+            <button id="show-slider" onclick="showSlider()">Meniu</button>
+            <h5 id="website-name">OnCo</h5>
+            <a href="profile.html">Profil</a>
+        </div>
+        <div id="left-slider" class="slider">
+            <div>
+                <button onclick="closeSlider()">❌</button>
+            </div>
+            <a href="index.html">Acasa</a>
+            <a href="add_contact.html">Adauga un contact</a>
+            <a href="groups.html">Gestioneaza gruparile</a>
+            <a href="#">Export contacte vCard</a>
+            <a href="#">Export contacte CSV</a>
+            <a href="#">Feed Atom</a>
+            <a href="edit_contact.html">Editeaza Profilul</a>
+            <a href="#">Delogare</a>
+        </div>
+    </nav>
+    <button id="show-filters" onclick="showFilters()">Filtre</button>
+    <form class="filter-list" method="GET" action="index.html">
+        <button id="close-filters" onclick="closeFilters()">❌ Inchide</button>
+        <button id="apply-filters" onclick="applyFilters()">Aplica</button>
+        <div class="filter-list-object">
+            <h1>Nume</h1>
+            <input name="name" type="text" placeholder="Klaus" />
+        </div>
+        <div class="filter-list-object">
+            <h1>Varsta</h1>
+            <input name="age-min" id="age-min-input" class="age" type="number" value="8" min="8" max="56" />
+            <input name="age-max" id="age-max-input" class="age" type="number" value="120" min="56" max="120" />
+        </div>
+        <div class="filter-list-object">
+            <h1>Locatie</h1>
+            <input name="location" id="iasi" type="checkbox" value="Iasi" />
+            <label for="iasi" class="check-box">Iasi</label>
+            <input name="location" id="bucuresti" type="checkbox" value="Bucuresti" />
+            <label for="bucuresti" class="check-box">Bucuresti</label>
+            <input name="location" id="cluj" type="checkbox" value="Cluj" />
+            <label for="cluj" class="check-box">Cluj</label>
+            <input name="location" id="timisoara" type="checkbox" value="Timisoara" />
+            <label for="timisoara" class="check-box">Timisoara</label>
+        </div>
+        <div class="filter-list-object">
+            <h1>Scoala / Facultate</h1>
+            <input name="studies" id="fii" type="checkbox" value="FII" />
+            <label for="fii" class="check-box">Facultatea de Informatica</label>
+            <input name="studies" id="feaa" type="checkbox" value="FEAA" />
+            <label for="feaa" class="check-box">Facultatea de Economie și
+                    Administrarea Afacerilor</label>
+            <input name="studies" id="etti" type="checkbox" value="ETTI" />
+            <label for="etti" class="check-box">Facultatea de Electronică,
+                    Telecomunicații și Tehnologia Informației</label>
+            <input name="studies" id="chimie" type="checkbox" value="Chimie" />
+            <label for="chimie" class="check-box">Facultatea de Chimie</label>
+        </div>
+        <div class="filter-list-object">
+            <h1>Interese</h1>
+            <input name="interests" type="text" placeholder="ceai filme" />
+        </div>
+        <input type="submit" style="display:none" />
+
+    </form>
+
+    <ul class="contacts-list">
+        <li class="group-start">
+            <p>Presedinti</p>
+        </li>
+        <li class="card">
+            <div class="card-up">
+                <h1 class="description">
+                    "Am aparut in Singur Acasa 2"
+                </h1>
+            </div>
+            <div class="card-down">
+                <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/03/08/17/trump-2020-what-if.jpg" alt="Profile picture" />
+                <h3>
+                    Donald Trump
+                </h3>
+                <h2>Telefon: +40712345678</h2>
+            </div>
+            <div class="card-hover">
+                <h3>Donald Trump</h3>
+                <button>Copiaza numarul</button>
+                <a href="profile.html">Profil</a>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-up">
+                <h1 class="description">"Klausssss"</h1>
+            </div>
+            <div class="card-down">
+                <img src="https://www.capital.ro/uploads/cache/2018-09/iohannis-55856000-605x340.jpg" alt="Profile picture" />
+                <h3>Klaus Iohannis</h3>
+                <h2>Telefon: +40712345679</h2>
+            </div>
+            <div class="card-hover">
+                <h3>Klaus Iohannis</h3>
+                <button>Copiaza numarul</button>
+                <a href="profile.html">Profil</a>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-up">
+                <h1 class="description">
+                    "Macaroane"
+                </h1>
+            </div>
+            <div class="card-down">
+                <img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F8C6/production/_103568636_gettyimages-1036307366.jpg" alt="Profile picture" />
+                <h3>
+                    Emmanuel Macron
+                </h3>
+                <h2>Telefon: +40712345670</h2>
+            </div>
+            <div class="card-hover">
+                <h3>Emanuel Macron</h3>
+                <button>Copiaza numarul</button>
+                <a href="profile.html">Profil</a>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-up">
+                <h1 class="description">
+                    "Am rachete nucleare"
+                </h1>
+            </div>
+            <div class="card-down">
+                <img src="https://cdn.theatlantic.com/assets/media/img/mt/2018/07/RTX6C7C1-1/lead_720_405.jpg" alt="Profile picture" />
+                <h3>
+                    Vladimir Putin
+                </h3>
+                <h2>Telefon: +40712345671</h2>
+            </div>
+            <div class="card-hover">
+                <h3>Vladimir Putin</h3>
+                <button>Copiaza numarul</button>
+                <a href="profile.html">Profil</a>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-up">
+                <h1 class="description">
+                    "Si eu am rachete nucleare"
+                </h1>
+            </div>
+            <div class="card-down">
+                <img src="https://cdnph.upi.com/svc/sv/i/2491477070462/2016/1/14770705616201/Kim-Jong-Un-maintains-weight-gain-drinks-excessively-report-says.jpg" alt="Profile picture" />
+                <h3>
+                    Kim Jong Un
+                </h3>
+                <h2>Telefon: +40712345672</h2>
+            </div>
+            <div class="card-hover">
+                <h3>Kim Jong Un</h3>
+                <button>Copiaza numarul</button>
+                <a href="profile.html">Profil</a>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-up">
+                <h1 class="description">
+                    "Am aparut in Singur Acasa 2"
+                </h1>
+            </div>
+            <div class="card-down">
+                <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/03/08/17/trump-2020-what-if.jpg" alt="Profile picture" />
+                <h3>
+                    Donald Trump
+                </h3>
+                <h2>Telefon: +40712345678</h2>
+            </div>
+            <div class="card-hover">
+                <h3>Donald Trump</h3>
+                <button>Copiaza numarul</button>
+                <a href="profile.html">Profil</a>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-up">
+                <h1 class="description">"Klausssss"</h1>
+            </div>
+            <div class="card-down">
+                <img src="https://www.capital.ro/uploads/cache/2018-09/iohannis-55856000-605x340.jpg" alt="Profile picture" />
+                <h3>Klaus Iohannis</h3>
+                <h2>Telefon: +40712345679</h2>
+            </div>
+            <div class="card-hover">
+                <h3>Klaus Iohannis</h3>
+                <button>Copiaza numarul</button>
+                <a href="profile.html">Profil</a>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-up">
+                <h1 class="description">
+                    "Macaroane"
+                </h1>
+            </div>
+            <div class="card-down">
+                <img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F8C6/production/_103568636_gettyimages-1036307366.jpg" alt="Profile picture" />
+                <h3>
+                    Emmanuel Macron
+                </h3>
+                <h2>Telefon: +40712345670</h2>
+            </div>
+            <div class="card-hover">
+                <h3>Emanuel Macron</h3>
+                <button>Copiaza numarul</button>
+                <a href="profile.html">Profil</a>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-up">
+                <h1 class="description">
+                    "Am rachete nucleare"
+                </h1>
+            </div>
+            <div class="card-down">
+                <img src="https://cdn.theatlantic.com/assets/media/img/mt/2018/07/RTX6C7C1-1/lead_720_405.jpg" alt="Profile picture" />
+                <h3>
+                    Vladimir Putin
+                </h3>
+                <h2>Telefon: +40712345671</h2>
+            </div>
+            <div class="card-hover">
+                <h3>Vladimir Putin</h3>
+                <button>Copiaza numarul</button>
+                <a href="profile.html">Profil</a>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-up">
+                <h1 class="description">
+                    "Si eu am rachete nucleare"
+                </h1>
+            </div>
+            <div class="card-down">
+                <img src="https://cdnph.upi.com/svc/sv/i/2491477070462/2016/1/14770705616201/Kim-Jong-Un-maintains-weight-gain-drinks-excessively-report-says.jpg" alt="Profile picture" />
+                <h3>
+                    Kim Jong Un
+                </h3>
+                <h2>Telefon: +40712345672</h2>
+            </div>
+            <div class="card-hover">
+                <h3>Kim Jong Un</h3>
+                <button>Copiaza numarul</button>
+                <a href="profile.html">Profil</a>
+            </div>
+        </li>
+    </ul>
+
+    <script>
+        var minAge = document.getElementById("age-min");
+        var maxAge = document.getElementById("age-max");
+        var minAgeInput = document.getElementById("age-min-input");
+        var maxAgeInput = document.getElementById("age-max-input");
+        minAge.oninput = function() {
+            minAgeInput.value = this.value;
+        }
+        maxAge.oninput = function() {
+            maxAgeInput.value = this.value;
+        }
+        minAgeInput.oninput = function() {
+            minAge.value = this.value;
+        }
+        maxAgeInput.oninput = function() {
+            maxAge.value = this.value;
+        }
+
+        function showFilters() {
+            var filters = document.getElementsByClassName("filter-list")[0];
+            var contacts = document.getElementsByClassName("contacts-list")[0];
+            filters.classList.add("filter-list-shown");
+            contacts.classList.add("hide-contacts-list");
+        }
+
+        function closeFilters() {
+            var filters = document.getElementsByClassName("filter-list")[0];
+            var contacts = document.getElementsByClassName("contacts-list")[0];
+            filters.classList.remove("filter-list-shown");
+            contacts.classList.remove("hide-contacts-list");
+        }
+
+        function applyFilters() {
+
+        }
+    </script>
+</body>
+
+</html>

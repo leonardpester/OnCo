@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="/styles/reseter.css" rel="stylesheet">
+    <link href="/styles/groups.css" rel="stylesheet">
+    <link href="/styles/navigation.css" rel="stylesheet">
+    <script src="/javascript/nav.js"></script>
+    <title>OnCo - Grupari</title>
+    <script>
+        function checkMark() {
+            var contacts = document.getElementsByClassName("contact");
+            for (var index = 0; index < contacts.length; index++) {
+                if (contacts[index].classList[1] === "contact-selected") {
+                    alert("Poti selecta doar un singur contact");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function mark(event) {
+            if (event.currentTarget.classList[1] === "contact-selected")
+                event.currentTarget.classList.remove("contact-selected");
+            else if (checkMark())
+                event.currentTarget.classList.add("contact-selected");
+        }
+
+        function inputGrup() {
+            var txt;
+            var groupName = prompt("Numele noului grup:", "");
+            if (groupName == null || groupName == "") {
+                txt = "Nume invalid";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="navigation-bar">
+            <button id="show-slider" onclick="showSlider()">Meniu</button>
+            <h5 id="website-name">OnCo</h5>
+            <a href="profile.html">Profil</a>
+        </div>
+        <div id="left-slider" class="slider">
+            <div>
+                <button onclick="closeSlider()">❌</button>
+            </div>
+            <a href="index.html">Acasa</a>
+            <a href="add_contact.html">Adauga un contact</a>
+            <a href="groups.html">Gestioneaza gruparile</a>
+            <a href="#">Export contacte vCard</a>
+            <a href="#">Export contacte CSV</a>
+            <a href="#">Feed Atom</a>
+            <a href="edit_contact.html">Editeaza Profilul</a>
+            <a href="#">Delogare</a>
+        </div>
+    </nav>
+    <div id="grouped">
+        <ul class="group">
+            <li class="group-name">
+                <h5>Presedinti</h5>
+            </li>
+            <li class="contact" onclick="mark(event)">
+                <img class="contact-picture" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/03/08/17/trump-2020-what-if.jpg" alt="Profile Picture" />
+                <h2 class="contact-name">Donald Trump</h2>
+            </li>
+            <li class="contact" onclick="mark(event)">
+                <img class="contact-picture" src="https://www.capital.ro/uploads/cache/2018-09/iohannis-55856000-605x340.jpg" alt="Profile Picture" />
+                <h2 class="contact-name">Klaus Iohannis</h2>
+            </li>
+            <li class="contact" onclick="mark(event)">
+                <img class="contact-picture" src="https://cdn.theatlantic.com/assets/media/img/mt/2018/07/RTX6C7C1-1/lead_720_405.jpg" alt="Profile Picture" />
+                <h2 class="contact-name">Vladimir Putin</h2>
+            </li>
+            <li class="group-name">
+                <h5>Familie</h5>
+            </li>
+        </ul>
+    </div>
+    <div id="transition">
+        <button id="left">⏪</button>
+        <select>
+            <option>Presedinti</option>
+            <option>Familie</option>
+        </select>
+        <button id="new-group" onclick="inputGrup()">Grup nou</button>
+        <button id="right">⏩</button>
+    </div>
+    <div id="ungrouped">
+        <ul class="group">
+            <li class="contact" onclick="mark(event)">
+                <img class="contact-picture" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/03/08/17/trump-2020-what-if.jpg" alt="Profile Picture" />
+                <h2 class="contact-name">Donald Trump</h2>
+            </li>
+            <li class="contact" onclick="mark(event)">
+                <img class="contact-picture" src="https://www.capital.ro/uploads/cache/2018-09/iohannis-55856000-605x340.jpg" alt="Profile Picture" />
+                <h2 class="contact-name">Klaus Iohannis</h2>
+            </li>
+            <li class="contact" onclick="mark(event)">
+                <img class="contact-picture" src="https://cdn.theatlantic.com/assets/media/img/mt/2018/07/RTX6C7C1-1/lead_720_405.jpg" alt="Profile Picture" />
+                <h2 class="contact-name">Vladimir Putin</h2>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

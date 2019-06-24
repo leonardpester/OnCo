@@ -1,0 +1,79 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #feffff
+}
+
+#image {
+    border-style: outset;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+}
+
+.top {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.bottom {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#details {
+    font-size: 18px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.card {
+    border-top: 1px solid;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+#bottom-butoane {
+    margin-top: 4em;
+    margin-bottom: 4em;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center
+}
+
+.export {
+    display: inline-block;
+}
+
+.export button {
+    width: 100px;
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media (max-width:450px) {
+    .bottom {
+        margin: 0;
+    }
+}

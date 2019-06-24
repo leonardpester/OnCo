@@ -1,0 +1,408 @@
+body {
+    position: relative;
+    background-color: #e9ebee;
+    text-align: center;
+    padding-top: 5em;
+    z-index: 0;
+}
+
+.filter-list {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+}
+
+.filter-list-object {
+    padding: 1em 1em;
+    display: block;
+    text-align: left;
+    background: #ffffff;
+    margin: 1em 0px;
+    border-radius: 3px;
+    box-shadow: 2px 7px 14px #888888;
+}
+
+.filter-list-object:nth-child(3),
+.filter-list-object:last-child {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.filter-list-object:nth-child(3) h1 {
+    left: -45%;
+}
+
+.filter-list-object:last-child h1 {
+    left: -41%;
+}
+
+.filter-list-object h1 {
+    position: relative;
+    left: -8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.filter-list-object input[type="range"] {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.filter-list-object input[type="range"]:hover {
+    opacity: 1;
+}
+
+.filter-list-object input[type="range"]:first-child {
+    right: 40px;
+}
+
+.filter-list-object input[type="range"]:nth-child(2) {
+    left: 4px;
+}
+
+.filter-list-object input[type="text"] {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid blue;
+    padding: 0em .5em;
+    transition: .25s;
+    width: 80%;
+    float: center;
+}
+
+.filter-list-object input[type="text"]:focus {
+    outline: none;
+    border-bottom: 1px solid black;
+    padding: 0em 1em;
+}
+
+.filter-list-object input[type="checkbox"] {
+    display: none;
+}
+
+.filter-list-object label {
+    position: relative;
+    width: auto;
+    display: block;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    padding: 5px 18px;
+    margin: 5px 0px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.filter-list-object .check-box:hover {
+    padding-left: 22px;
+}
+
+.filter-list-object .check-box::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border: 1px solid blue;
+    border-radius: 3px;
+    transform: translateY(-50%);
+    transition: .25s;
+}
+
+.filter-list-object input[type="checkbox"]:checked+.check-box {
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.filter-list-object input[type="checkbox"]:checked+.check-box:before {
+    width: 100%;
+    height: 130%;
+    background: blue;
+    top: 53%;
+    border: none;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+input[type="number"] {
+    position: relative;
+    margin-top: 20px;
+    display: inline-block;
+    width: 80px;
+    left: 15%;
+    border: 1px solid blue !important;
+    text-align: center;
+}
+
+.contacts-list {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 60%;
+    list-style: none;
+}
+
+.card {
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 5px;
+    margin: .5em;
+    box-shadow: 2px 7px 14px #888888;
+}
+
+.card-up {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    background: white;
+    color: black;
+    height: 200px;
+    text-align: center;
+}
+
+.card-up>h1 {
+    position: absolute;
+    width: 90%;
+    max-height: 150px;
+    font-size: 20px;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-down {
+    position: relative;
+    background: darkblue;
+    height: 150px;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.card-down * {
+    width: 100%;
+}
+
+.card-down>h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    transform: translate(-50%, -50%);
+}
+
+.card-down>h2 {
+    position: absolute;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-down>img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.group-start {
+    position: relative;
+    display: block;
+    height: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 1em;
+}
+
+.group-start:first-child {
+    margin-top: 0px;
+}
+
+.group-start p::before,
+.group-start p::after {
+    position: relative;
+    content: " ";
+    display: inline-block;
+    width: 35%;
+    height: 2px;
+    background: black;
+    left: 10px;
+    transform: translateY(-100%);
+}
+
+.group-start p::before {
+    left: -10px;
+}
+
+.card-hover {
+    display: none;
+}
+
+.card:hover>.card-hover,
+.card:focus>.card-hover {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+}
+
+.card-hover h3 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 27px;
+    color: white;
+}
+
+.card-hover button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 150px;
+    transform: translateX(-50%);
+    border: 2px solid blue;
+    background: blue;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .25s;
+}
+
+.card-hover a {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    height: 42px;
+    width: 145px;
+    transform: translateX(-50%);
+    border: 2px solid blue;
+    background: blue;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    appearance: button;
+    line-height: 42px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .25s;
+}
+
+.card-hover h3:hover {
+    cursor: context-menu;
+}
+
+.card-hover button:hover,
+.card-hover a:hover {
+    background: darkblue;
+    border: 2px solid darkblue;
+}
+
+#show-filters,
+#close-filters,
+#apply-filters {
+    position: relative;
+    display: none;
+    width: 80%;
+    height: 3em;
+    font-size: 20px;
+    color: white;
+    border: none;
+    background: blue;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1em;
+    transition: .25s;
+}
+
+#apply-filters {
+    display: block;
+    width: 100%;
+    height: 2em;
+}
+
+.hide-contacts-list {
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    .contacts-list {
+        width: 65%;
+    }
+    .card {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .filter-list {
+        position: absolute;
+        display: block;
+        top: 4em;
+        width: 100%;
+        margin: 0;
+        transform: translateX(-120%);
+        transition: .25s;
+        background: white;
+        z-index: 1;
+    }
+    .filter-list-shown {
+        transform: translateX(0%);
+    }
+    .contacts-list {
+        width: 90%;
+    }
+    #show-filters,
+    #close-filters,
+    #apply-filters {
+        display: block;
+    }
+    #close-filters {
+        margin-top: 1em;
+    }
+    input[type="number"] {
+        display: block;
+        width: 70%;
+        height: 2em;
+        font-size: 1.5em;
+    }
+    input[type="range"] {
+        display: none !important;
+    }
+    .filter-list-object:nth-child(3) h1 {
+        left: -48%;
+    }
+}

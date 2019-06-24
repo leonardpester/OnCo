@@ -1,0 +1,176 @@
+body {
+    position: relative;
+    background: #e9ebee;
+    padding-top: 9em;
+    padding-bottom: 3em;
+    text-align: center;
+}
+
+#grouped,
+#ungrouped {
+    width: 400px;
+    min-height: 500px;
+    display: inline-block;
+    margin: 0em;
+    list-style-type: none;
+    background: white;
+    box-shadow: 2px 7px 14px #888888;
+}
+
+#grouped::before,
+#ungrouped::before {
+    position: relative;
+    display: block;
+    content: "Grupati";
+    width: 100%;
+    height: 40px;
+    transform: translateY(-150%);
+    background: darkblue;
+    color: white;
+    font-size: 22px;
+    border-radius: 5px;
+    box-shadow: 2px 7px 14px #888888;
+    line-height: 40px;
+    margin-bottom: -1.8em;
+}
+
+#ungrouped::before {
+    content: "Negrupati"
+}
+
+#grouped {
+    vertical-align: top;
+    margin-right: 60px;
+}
+
+#ungrouped {
+    margin-left: 60px;
+}
+
+.group-name h5 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.group-name h5::before,
+.group-name h5::after {
+    position: relative;
+    content: " ";
+    display: inline-block;
+    width: 20%;
+    height: 2px;
+    background: black;
+    left: 10px;
+    transform: translateY(-100%);
+}
+
+.group-name h5::before {
+    left: -10px;
+}
+
+.group-name {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#transition {
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    height: inherit;
+}
+
+#transition * {
+    display: block;
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+#transition button {
+    width: 100%;
+    height: 2em;
+    font-size: 23px;
+}
+
+#transition select {
+    font-size: 16px;
+}
+
+#new-group {
+    font-size: 15px !important;
+    background: blue;
+    color: white;
+    margin-top: .5em;
+}
+
+.contact {
+    position: relative;
+    width: 100%;
+    height: 3.5em;
+    margin-left: -1px;
+    margin-top: 5px;
+    background: blue;
+    color: white;
+    border: 1px solid blue;
+    border-radius: 5px;
+    box-shadow: 2px 7px 14px #888888;
+    transition: .25s;
+}
+
+.contact-selected {
+    background: darkblue;
+    border: 1px solid darkblue;
+}
+
+.contact-picture {
+    position: absolute;
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    top: 50%;
+    left: 1em;
+    border: 1px solid black;
+    transform: translateY(-50%);
+}
+
+.contact-name {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 5em;
+    transform: translateY(-50%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+@media screen and (max-width:950px) {
+    #transition {
+        position: relative;
+        display: block;
+        width: 150px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    #grouped,
+    #ungrouped {
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+    #transition button {
+        max-width: 150px;
+    }
+    #transition select {
+        max-width: 150px;
+    }
+    #ungrouped::before {
+        margin-top: 4em;
+    }
+}

@@ -1,0 +1,209 @@
+﻿
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="project, infoiasi, web, social, friends, photos, videos, media" /> 
+    <title>OnlineContacts</title>
+    <link rel="stylesheet" href="scholarly.css">
+    <link rel="stylesheet" href="prism-coy.css">
+    <script src="node_modules/prismjs/prism.js" defer></script>
+  </head>
+  <body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+    <header>
+      <p class="title">OnCo - Online Contacts Manager</p>
+      <p class="subtitle">Documentatie</p>
+    </header>
+    <article id="what" typeof="schema:ScholarlyArticle" resource="#">
+      <h1>OnCo</h1>
+     
+        <ol>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="#" typeof="schema:Person">
+              <span property="schema:givenName">Iftimie Gabriel</span>
+              <span property="schema:familyName">Codrut</span>
+            </a>
+          </li>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="#" typeof="schema:Person">
+              <span property="schema:givenName">Pester</span>
+              <span property="schema:familyName">Leonard</span>
+            </a>
+          </li>
+        </ol>
+      
+
+      <section typeof="sa:Abstract" id="abstract">
+        <h2>Abstract</h2>
+        <p>
+          În conținutul lucrarii se regasesc urmatoarele: Introducere, Tehnologii utilizate, Arhitectura aplicatiei, Etapele de dezvoltare, Concluzie, Bibliografie
+        </p>
+      </section>
+      <section typeof="sa:MaterialsAndMethods" id="tehnologii">
+        <h2>Tehnologii</h2>
+        <h3>HTML</h3>
+        <p>
+          HyperText Markup Language (HTML) este un limbaj de marcare utilizat pentru crearea paginilor web ce pot fi afișate într-un browser (sau navigator). Scopul HTML este mai degrabă prezentarea informațiilor – paragrafe, fonturi, tabele ș.a.m.d. – decât descrierea semanticii documentului.HTML este prescurtarea de la Hyper Text Mark-up Language si este codul care sta la baza paginilor web. Va fi folosit in cadrul scheletului principal al proiectului .
+        </p>
+        <h3>CSS</h3>
+        <p>
+          CSS (Cascading Style Sheets) este un standard pentru formatarea elementelor unui document HTML. Stilurile se pot atașa elementelor HTML prin intermediul unor fișiere externe sau în cadrul documentului. CSS se poate utiliza și pentru formatarea elementelor XHTML, XML și SVGL.
+          Intregul design al aplicatiei se va fi realizat si formatat prin intermediul CSS.
+        </p>
+        <h3>Javascript / Xmlhttprequest</h3>
+        <p>
+          JavaScript (JS) este un limbaj de programare orientat obiect bazat pe conceptul prototipurilor. Este folosit mai ales pentru introducerea unor funcționalități în paginile web, codul Javascript din aceste pagini fiind rulat de către browser.
+          Xmlhttprequest este un obiect Javascript care permite obținerea de date în format XML (dar și HTML sau text simplu) cu ajutorul unui request HTTP.
+          Acest obiect este utilizat în cadrul tehnologiilor Ajax .
+          Cele doua tehnologii vor fi folosite in cadrul aplicatiei pentru validare client-side, animatii si cereri de tip AJAX.
+        </p>
+        
+        <h3>PHP5.7</h3>
+        <p>
+          Numele PHP provine din limba engleză și este un acronim recursiv: Php: Hypertext Preprocessor. Folosit inițial pentru a produce pagini web dinamice, este folosit pe scară largă în dezvoltarea paginilor și aplicațiilor web. Se folosește în principal înglobat în codul HTML. 
+        </p>
+        <h3>GitHub</h3>
+        <p>
+          Reprezinta un sistem de control al versiunilor codului sursa care va fi folosit pentru o mai buna administrare cat si pentru lucrul in echipa.
+        </p>
+        <h3>MySQL</h3>
+        <p>
+          MySQL este un sistem de gestiune a bazelor de date relaționale care va fi folosit pentru gestionarea bazei de date necesara aplicatiei web.
+        </p>
+      </section>
+      <section typeof="sa:MaterialsAndMethods" id="arhitectura">
+        <h2>Arhitectura aplicatiei</h2>
+        <p>
+          Utilizand tehnologiile mentionate in sectiunea anterioara, aplicatia va fi structurata in mai multe module, dupa cum urmeaza:
+        </p>
+        
+        <p><strong>1. Structura aplicatiei</strong></p>
+        <figure typeof = "sa:Image">
+            <img src="images/arhitectura.PNG" alt="filter">
+            <figcaption> Diagrama Arhitecturala </figcaption>
+        </figure>
+        <p>
+          Aplicația, pentru stocarea datelor, se va baza pe o bază de date relațională ce va conție 3 tabele (Users, Contacts și Groups). Tabelul Users conține datele utilizatorului cerute la înregistrare și o referință (contactId) către un contact care va reprezenta datele suplimentare pe care utilizatorul le va adăuga eventual.
+          Tabelul Contacts conține datele unui contact adăugat de către un utilizator și două referințe. O referință către utilizatorul care a creat contactul (userId) și o referință către grupul căruia aparține contactul (groupId).
+          Tabelul Groups conține doar numele fiecărui grup.
+          Schema bazei de date este urmatoarea:
+        </p>
+        <figure typeof = "sa:Image">
+          <img src="images/schemaBD.PNG" alt="filter">
+          <figcaption> Schema bazei de date </figcaption>
+       </figure>
+        <p>
+          Aplicația se va baza pe design patternul MVC. Fiecare pagină va avea 3 componente.
+          <ul>
+            <li>View: Această componentă se va ocupa de afișarea paginii.</li>
+            <li>Model
+              Prin această componentă se vor face modificări asupra aplicației cum ar fi modificări asupra datelor din baza de date și diferite "calcule" ce vor schimba ce va afișa view-ul.</li>
+            <li>Controller</li>    
+          </ul>  
+        
+        <p>
+          Controllerul este componenta care "leagă" cele 2 componente model și view ale unei pagini. Ea decide prin rezultatele de la componenta model ce va afișa prin componenta view.
+        </p>
+        <figure typeof = "sa:Image">
+          <img src="images/tabelArhitectura.PNG" alt="profile">
+          <figcaption> Tabel Arhitectural </figcaption>
+       </figure>
+       <p>
+        Luăm spre exemplu pagina principală în care dorim să facem o filtrare după Scoala / Facultate a contactelor.
+        După aplicarea filtrului se predă parametrul controllerului. Controllerul preia parametrul, apelează functia pentru filtrare din model (care face o interogare la baza de date) 
+        și asteaptă răspunsul care va fi o lista cu toate contactele ce respectă condiția din filtru.
+        Controllerul apoi apeleaza view-ul oferindu-i acea listă de contacte, acesta urmând să afișeze acele contacte.
+       </p>
+       <p>
+        Pentru a persista utilizatorii conectați se va folosi un cookie care va avea ca informație un JWT (JSON Web Token) care va conține 3 părți:
+          <ul>
+            <li>Header: ce va conține algoritmul de criptare și tipul tokenului (JWT).</li>
+            <li>Payload: conține id-ul utilizatorului</li>
+            <li>Semnatura: reprezintă headerul criptat + payloadul criptat + un secret, acest întreg mesaj fiind și el criptat.</li>
+          </ul>
+          <p>Formatul acestui JWT va fi: hhhhh.ppppp.sssssss .</p>
+            <p> Dupa ce a fost creat un Cookie, acesta va avea durata de viata 1H.</p>
+       
+
+
+       <p><strong>2. Register / Login</strong></p>
+        <p>
+          Pentru a putea interacționa cu aplicația, fiecare utilizator trebuie sa se înregistreze. Formularul de înregistrare va conține date personale
+          precum username-ul adresa de email, precum și o parola care va fi folosita pentru autentificare. În momentul în care utilizatorul
+          trimite datele, acestea sunt verificate și, în cazul în care acestea sunt corecte, se introduc în baza de date, iar utilizatorul este redirecționat
+          către pagina de login. În cazul în care datele nu sunt valide, userul va primi feedback și i se va cere reintroducerea unor date valide.
+          Serverul preia datele, le verifică și trimite unul din două răspunsuri:
+          <ul>
+            <li>În cazul în care datele sunt corecte, userul va fi redirecționat către pagina principala</li>
+            <li>În cazul în care datele nu sunt valide, utilizatorul va primi un mesaj corespunzător și va trebui sa reintroduca datele</li>
+          </ul>
+        
+        <figure typeof = "sa:Image">
+            <img src="images/login.png" alt="Login page">
+            <figcaption> Pagina de login </figcaption>
+        </figure>
+
+        <p><strong>3. Pagina principală </strong></p>
+        <p>
+          După logare, utilizatorul este redirectionat către pagina principală.
+        </p>
+        <figure typeof = "sa:Image">
+            <img src="images/home.png" alt="home">
+            <figcaption> Pagina principală </figcaption>
+        </figure>
+
+
+
+        <p><strong>4. Diagrame Use Case</strong></p>
+        
+        <figure typeof = "sa:Image">
+            <img src="images/useCase1.PNG" alt="profile">
+            <figcaption> Utilizator autentintificat </figcaption>
+        </figure>
+        <figure typeof = "sa:Image">
+          <img src="images/useCase2.PNG" alt="profile">
+          <figcaption> Utilizator neautentificat </figcaption>
+         </figure>
+
+        
+        
+        </section> 
+      <section typeof="sa:DevelopmentStages" id="stages">
+        <h2>Etape de dezvoltare</h2>
+        <p>
+          Aplicatia noastra web va fi dezvoltata in urmatoarele etape:
+        </p>
+        <ol>
+        	<li>Construirea partii de front-end, pe baza designului prezentat mai sus;</li>
+        	<li>Construirea logicii bazei de date, cu optimizarile necesare pentru o functionare cat mai rapida;</li>
+        	<li>Implementarea pe partea de server</li>
+        	<li>Testarea aplicatiei.</li>
+        </ol>
+        <p>
+        	Bineinteles ca aceste etape se pot desfasura si concomitent, nu numai secvential.
+        </p>
+        <h3>
+        	Impartirea task-urilor
+        </h3>
+        <dl>      
+
+        	<dt><strong>Iftimie Gabriel Codrut</strong></dt>
+          <dd>Pagina de pornire cu filtrarea</dd>
+          <dd>Pagina de grupari</dd>
+          <dd>Feed Atom</dd>
+          <dd>Instructiuni ( HTML Schoolarly )</dd>
+     
+
+        	<dt><strong>Pester Leonard</strong></dt>
+          <dd>Pagina de login/register </dd>
+          <dd>Pagina de profil/contact </dd>
+          <dd>Pagina de adaugare/editare a unui contact</dd>
+          <dd>Exportare CSV/VCard</dd>
+          <dd>Documentatie ( HTML Schoolarly )</dd>
+      
+        </dl>
+      </section>
+    </article>
+  </body>
+</html>

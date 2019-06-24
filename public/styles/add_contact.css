@@ -1,0 +1,97 @@
+.card {
+    border: 1px;
+    font-weight: bold;
+    width: 700px;
+    left: 50%;
+    margin-top: 5em;
+    margin-bottom: 2em;
+    transform: translateX(-50%);
+    background-color: #feffff;
+    position: relative;
+}
+
+label {
+    font-size: 20px;
+}
+
+h1 {
+    padding: 0px 10px 30px 10px;
+    border-bottom: 1px solid;
+    font-size: 30px;
+}
+
+form {
+    margin-top: 2em;
+}
+
+textarea {
+    margin: 10px 0;
+}
+
+input,
+select {
+    text-align: center;
+    width: 400px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 17px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: 400px;
+    background-color: #0000FF;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+form button:hover {
+    background-color: #00008B
+}
+
+.card #add_contact {
+    box-shadow: 2px 7px 25px #888888;
+    padding: 40px 20px;
+    height: 100%;
+    text-align: center;
+    height: 75%;
+}
+
+body {
+    background-color: #e9ebee
+}
+
+form button {
+    width: 300px;
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media screen and (max-width:420px) {
+    input {
+        width: 100%;
+    }
+    button {
+        width: 100%
+    }
+    .card {
+        width: 100%;
+    }
+    textarea {
+        width: 100%;
+    }
+}

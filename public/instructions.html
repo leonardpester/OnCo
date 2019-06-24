@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="project, infoiasi, web, social, friends, photos, videos, media" />
+    <title>OnCo - Instructiuni</title>
+    <link rel="stylesheet" href="styles/scholarly.css">
+    <link rel="stylesheet" href="styles/prism-coy.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+</head>
+
+<body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+    <header>
+        <p class="title">OnCo - Online contacts manager</p>
+        <p class="subtitle">Manual de instructiuni</p>
+    </header>
+    <article id="toc" typeof="schema:ScholarlyArticle" resource="#">
+        <h1>Cuprins</h1>
+        <ul>
+            <li>
+                <h3><a href="#authentication">Login / Register</a></h3>
+            </li>
+            <li>
+                <h3><a href="#index">Pagina principala</a></h3>
+            </li>
+            <li>
+                <h3><a href="#navigation">Bara de navigatie</a></h3>
+            </li>
+            <li>
+                <h3><a href="#groups">Pagina de gestionare a gruparilor</a></h3>
+            </li>
+            <li>
+                <h3><a href="#contact">Vizualizarea unui contact</a></h3>
+            </li>
+            <li>
+                <h3><a href="#contact-edit">Editarea / Adaugarea unui contact</a></h3>
+            </li>
+        </ul>
+    </article>
+    <article id="authentication" typeof="schema:ScholarlyArticle" resource="#">
+        <h1>Login / Register</h1>
+        <section typeof="sa:MaterialsAndMethods">
+            <h2>Login</h2>
+            <p>
+                Atunci cand intrati pentru prima oara pe site veti fi intampinat pe pagina de autentificare.
+            </p>
+            <figure typeof="sa:Image">
+                <img src="images/login.png" alt="Pagina de autentificare">
+                <figcaption> Pagina de autentificare </figcaption>
+            </figure>
+            <p>
+                Daca aveti un cont creat atunci puteti sa introduceti emailul si parola aferente contului, apoi apasati pe butonul <strong>Login</strong>.
+            </p>
+            <p>Daca nu aveti un cont creat atunci apasati butonul <strong>Vreau sa imi fac cont!</strong> si va va aparea un formular pentru introducrerea datelor unui nou cont.</p>
+        </section>
+        <section typeof="sa:MaterialsAndMethods" id="register">
+            <h2>Register</h2>
+            <figure typeof="sa:Image">
+                <img src="images/register.png" alt="Pagina de inregistrare">
+                <figcaption> Pagina de inregistrare </figcaption>
+            </figure>
+
+            <p>Dupa ce ati introdus datele necesare si ati apasat pe butonul <strong>Register</strong> veti fi redirectionat la pagina de autentificare pentru a introduce datele noului cont pentru a continua pe site.</p>
+            <p>Dupa ce v-ati logat, nu va mai trebui sa introduceti datele de autentificare timp de o ora.</p>
+        </section>
+    </article>
+    <article id="index" typeof="schema:ScholarlyArticle" resource="#">
+        <h1>Pagina principala</h1>
+        <p>
+            După logare, sunteti redirectionat către pagina principală care reprezinta pagina in care sunt listate toate contactele dumneavoastra.<br>Daca este prima oara cand va logati, veti avea un contact care reprezinta contactul dumneavoastra.
+        </p>
+        <figure typeof="sa:Image">
+            <img src="images/index.png" alt="home">
+            <figcaption> Pagina principală </figcaption>
+        </figure>
+        <p>Pagina este impartita in doua parti. In partea <strong>stanga</strong> este partea de <strong>filtrare</strong>.</p>
+        <p>In partea <strong>dreapta</strong> este partea in care apar <strong>conactele</strong> in functie de grupul in care sunt.</p>
+
+        <p><strong>Filtrarea</strong> se poate face in functie de 5 criterii:</p>
+        <ul>
+            <li>Nume</li>
+            <li>Varsta (varsta minima si varsta maxima)</li>
+            <li>Locatie</li>
+            <li>Studii</li>
+            <li>Interese</li>
+        </ul>
+        <p>Filtrele pentru <strong>locatie</strong> si <strong>studii</strong> vor aparea atunci cand contactele au setate aceste valori.</p>
+    </article>
+    <article id="navigation" typeof="schema:ScholarlyArticle" resource="#">
+        <h1>Bara de navigatie</h1>
+        <figure typeof="sa:Image">
+            <img src="images/navigation.png" alt="Bara de navigatie">
+            <figcaption>Bara de navigatie</figcaption>
+        </figure>
+        <p>Pe fiecare pagina va aparea aceasta bara de navigatie.</p>
+        <p>Aceasta contine 2 butoane: <strong>Meniu</strong> si <strong>Profil</strong></p>
+        <p>Butonul <strong>Profil</strong> te redirectioneaza la pagina in care iti arata toata detaliile contactului tau.</p>
+        <p>Butonul <strong>Meniu</strong> deschide o fereastra ce iti permite navigarea pe diverse pagini.</p>
+        <figure typeof="sa:Image">
+            <img src="images/nav-menu.png" alt="Meniul deschis">
+            <figcaption>Bara de navigatie cu meniul deschis</figcaption>
+        </figure>
+        <p>Butonul ❌ inchide acest meniu.</p>
+    </article>
+    <article id="groups" typeof="schema:ScholarlyArticle" resource="#">
+        <h1>Pagina de gestionare a gruparilor</h1>
+        <figure typeof="sa:Image">
+            <img src="images/groups.PNG" alt="Gestionarea gruparilor">
+            <figcaption>Pagina de gestionare a gruparilor</figcaption>
+        </figure>
+        <p>In aceasta pagina poti grupa anumite contacte. Spre exemplu poti face grupari de genul colegi, familie etc.</p>
+        <p>Initial nu este nici un grup creat. Pentru a crea un grup apasa pe butonl <strong>Grup nou</strong> si iti va aparea o fereastra in care ti se solicita numele noului grup.</p>
+        <figure typeof="sa:Image">
+            <img src="images/new-group.PNG" alt="Adaugare grup">
+            <figcaption>Adaugarea unui grup</figcaption>
+        </figure>
+        <p>Dupa crearea noului grup deasupra butonului <strong>Grup nou</strong> se va actualiza o lista care contine numele tuturor grupurilor create de tine iar in partea stanga, in tabela <strong>Grupati</strong> va aparea numele grupului nou creat.</p>
+        <p>Pentru a muta un contact din tabela <strong>Negrupati</strong> in tabela <strong>Grupati</strong> selectati din lista mentionata mai sus numele grupului apoi dati click pe un contact pentru a-l selecta.</p>
+        <p>Veti sti ca un contact a fost selectat atunci cand acel fundal albastu se intuneca (Exemplu: contactul Alexandru Gheorghe din poza de mai jos).</p>
+        <figure typeof="sa:Image">
+            <img src="images/new-group-added.PNG" alt="Adaugare grup">
+            <figcaption>Selectarea unui contact</figcaption>
+        </figure>
+        <p>Pentru a muta contactul in grupul selectat(in cazul de fata Familie) apasati pe butonul ⏪.</p>
+        <p>Dupa apasarea butonului contatul va aparea in partea stanga sub numele grupului specificat.</p>
+        <p>Pentru a muta contactul inapoi la contacte negrupate, selectati-l si apoi apasati pe butonul ⏩.</p>
+        <p>Pentru a muta un contact dintr-un grup in altul nu este nevoie ca sa il mutati intai la contacte negrupate iar apoi la noul grup. Selectati contactul, apoi selectati noul grup din lista de grupuri (ordinea nu conteaza) si apoi apasati pe butonul
+            ⏩.
+        </p>
+        <figure typeof="sa:Image">
+            <img src="images/moved-contact.PNG" alt="Contact mutat">
+            <figcaption>Contact mutat in alt grup</figcaption>
+        </figure>
+    </article>
+    <article id="contact" typeof="schema:ScholarlyArticle" resource="#">
+        <h1>Vizualizarea unui contact</h1>
+        <figure typeof="sa:Image">
+            <img src="images/contact.PNG" alt="Contact">
+            <figcaption>Vizualizarea detaliilor unui contact</figcaption>
+        </figure>
+        <p>Aceasta pagina contine trei butoane: <strong>Export CSV</strong>, <strong>Export VCard</strong> si <strong>Editeaza</strong></p>.
+        <p>Butonul <strong>Editeaza</strong> te trimite pe pagina de editare a contactului pe care il vizualizezi.</p>
+        <p>Butoanele <strong>Export CSV</strong> si <strong>Export VCard</strong> au rolul de a crea un fisier de tip CSV respectiv VCard ce contine datele contactului respectiv.</p>
+    </article>
+    <article id="contact-edit" typeof="schema:ScholarlyArticle" resource="#">
+        <h1>Editarea/Adaugarea unui contact</h1>
+        <figure typeof="sa:Image">
+            <img src="images/contact-edit.PNG" alt="Editare contact">
+            <figcaption>Editarea unui contact</figcaption>
+        </figure>
+        <p>Aceasta pagina contine mai multe campuri ale contactului caruia i s-a solicitat editarea deja completate cu valorile curente. Dupa modificarea campurilor dorite si dupa apasarea butonului <strong>Salveaza</strong> contactul este actualizat.</p>
+        <P>Pentru adaugarea unui contact aveti acelasi formular, diferenta fiind ca acele campuri nu au nici o valoare.</P>
+    </article>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9ebee;
+}
+
+#js1 {
+    display: none;
+}
+
+#js2 {
+    display: block;
+}
+
+.register {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    height: 100%;
+    text-align: center;
+}
+
+.login {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    height: 100%;
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card {
+    margin-top: 5em;
+    box-shadow: 2px 7px 25px #888888;
+    background-color: #ffffff;
+    position: absolute;
+    text-align: center;
+    padding-bottom: 4em;
+    width: 550px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top {
+    text-align: center;
+    height: 70px;
+}
+
+button {
+    width: 300px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+label {
+    font-size: 19px;
+}
+
+form {
+    margin-top: 2em;
+}
+
+.card h1 {
+    text-align: center;
+    padding: 5px 0px 40px 0px;
+    font-size: 30px;
+    border-bottom: 1px solid;
+}
+
+@media screen and (max-width:360px) {
+    input {
+        width: 100%;
+    }
+    button {
+        width: 100%
+    }
+    .card {
+        width: 100%;
+    }
+}

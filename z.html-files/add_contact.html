@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="styles//reseter.css" rel="stylesheet">
+    <link href="/styles/add_contact.css" rel="stylesheet">
+    <link href="/styles/navigation.css" rel="stylesheet">
+    <script src="/javascript/nav.js"></script>
+
+    <title>Adaugare Contact</title>
+
+</head>
+
+<body>
+    <nav>
+        <div class="navigation-bar">
+            <button id="show-slider" onclick="showSlider()">Meniu</button>
+            <h5 id="website-name">OnCo</h5>
+            <a href="profile.html">Profil</a>
+        </div>
+        <div id="left-slider" class="slider">
+            <div>
+                <button onclick="closeSlider()">❌</button>
+            </div>
+            <a href="index.html">Acasa</a>
+            <a href="add_contact.html">Adauga un contact</a>
+            <a href="groups.html">Gestioneaza gruparile</a>
+            <a href="#">Export contacte vCard</a>
+            <a href="#">Export contacte CSV</a>
+            <a href="#">Feed Atom</a>
+            <a href="edit_contact.html">Editeaza Profilul</a>
+            <a href="#">Delogare</a>
+        </div>
+    </nav>
+    <div class="card">
+
+        <div id="add_contact">
+
+            <h1>Adauga un contact</h1>
+
+            <form action="#">
+                <label for="nume_prenume">Nume complet</label><br>
+                <input id="nume_prenume" type="text" name="name" placeholder="Introduceti numele si prenumele"><br>
+                <label for="adresa">Adresa</label><br>
+                <input id="adresa" type="text" name="adresa" placeholder="Strada. Bloc. Ap. Nr."><br>
+                <label for="data_nastere">Data nastere</label><br>
+                <input id="data_nastere" type="date" name="data_nastere"><br>
+                <label for="email1">E-mail</label><br>
+                <input id="email1" type="email" name="email1" placeholder="Introduceti un E-mail"><br>
+                <input id="email2" type="email" name="email2" placeholder="* Introduceti un alt E-mail"><br>
+                <label for="nr_telefon1">Numar de telefon</label><br>
+                <input id="nr_telefon1" type="text" name="nr_telefon1" placeholder="0712345678"><br>
+                <input id="nr_telefon2" type="text" name="nr_telefon2" placeholder="* 0712345678"><br>
+                <label for="adresa_web1">Adresa web</label><br>
+                <input id="adresa_web1" type="text" name="adresa_web1" placeholder="https://web-adress.com"><br>
+                <input id="adresa_web2" type="text" name="adresa_web2" placeholder="* https://web-adress.com"><br>
+                <label for="descriere">Descriere</label><br>
+                <textarea id="descriere" cols="54" rows="5" placeholder="Introduceti o descriere"></textarea><br>
+                <label for="interese">Interese</label><br>
+                <input id="interese" type="text" name="interese" placeholder="Introduceti interese"><br>
+                <label for="imagine">Poza de profil</label><br>
+                <input id="imagine" type="text" name="imagine" placeholder="Introduceti adresa linkului unei imagini de profil"><br>
+                <br>
+                <p>(*) - Optional</p>
+
+
+
+
+                <br><br>
+                <button type="submit" value="adauga_contact">Adauga contact</button><br>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
