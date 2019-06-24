@@ -1,0 +1,242 @@
+body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: #D5A235;
+}
+
+#logSignButt button {
+    background: white;
+    border: white;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    margin-top: -0.25em;
+    right: 0;
+    width: 9%;
+    border-radius: 0 0 0 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 2em;
+}
+
+#middle {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -3.05em;
+    margin-top: 1vh;
+    display: block;
+    text-align: center;
+    background: rgba(151, 146, 146, 0.8);
+    width: 75%;
+    min-height: 200px;
+}
+
+#tops {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 85%;
+    min-height: 80vh;
+}
+
+.mostRecents {
+    vertical-align: top;
+    display: inline-block;
+    border-width: thin;
+    border-left-width: 0.5em;
+    /*border-style: solid;*/
+    border-color: rgba(0, 0, 255, 0.5);
+    border-radius: 3%;
+    background: rgba(1, 1, 1, .5);
+    /*background: rgba(0, 0, 255, 0.25);*/
+    width: 30%;
+    min-height: 30vh;
+    max-height: 70vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow-y: auto;
+}
+
+#tMostRecents tr:nth-child(2) {
+    border-width: 0px;
+    border-top-width: 0px;
+    border-style: solid;
+    border-color: whitesmoke;
+    /*border-color:rgba(134, 14, 182, 0.582);*/
+}
+
+#tMostRecents tr {
+    border-width: 0px;
+    border-top-width: thin;
+    border-style: solid;
+    border-color: whitesmoke;
+    /*border-color:rgba(134, 14, 182, 0.582);*/
+}
+
+#tMostRecents td {
+    text-align: justify;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 0.5em;
+}
+
+#tMostRecents {
+    width: 100%;
+    padding: 0%;
+    border-collapse: collapse;
+    border-radius: 25%;
+    max-width: 100%;
+}
+
+#recentsDescription {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 3px 3px black;
+}
+
+.recentsIcon {
+    width: 5vw;
+    height: 5vw;
+    margin-right: 1em;
+    margin-left: 1em;
+    border-radius: 50%;
+    padding: 5px;
+    border-width: 0em;
+    border-bottom-width: 0.2em;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 0px 1px black;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+
+	background-color: rgba(0,0,0,0);
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 0.3em;
+	background-color: rgba(0,0,0,0);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color:rgba(45, 49, 49, 0.75);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(37, 38, 39);
+    height: 10px;
+    border-radius: 50%;
+}
+
+.recentsText {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.containerImg {
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    position: relative  ;
+    width: 100%;
+    height: 0;
+    padding-top: 40%;
+    background: black;
+}
+
+.containerImg .slideImg {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.containerImg .slideImg img {
+    width: 100%;
+    height: 100%;
+}
+
+#i1 , #i2 , #i3 {
+    display: none;
+}
+
+.prev , .next {
+    width: 12%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(1, 1, 1, .5);
+    z-index: 99;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.containerImg .nav {
+    width: 100%;
+    height: 11px;
+    bottom: 12%;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+}
+
+.nav .dots {
+    top: -5px;
+    width: 18px;
+    height: 18px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background: rgba(88, 88, 88, .6);
+}
+
+.slideImg {
+    z-index: -1;
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three {
+    z-index: 9;
+}
+
+#i1:checked ~ .nav #dot1,
+#i2:checked ~ .nav #dot2,
+#i3:checked ~ .nav #dot3 {
+    background-color: white;
+    border: 1px solid rgba(88, 88, 88, .6);
+}
+
+@media (max-width:900px) {
+    .mostRecents {
+        vertical-align: top;
+        display: inline-block;
+        border-width: thin;
+        border-left-width: 0.5em;
+        /*border-style: solid;*/
+        border-color: rgba(0, 0, 255, 0.5);
+        border-radius: 3%;
+        background: rgba(1, 1, 1, .5);
+        /*background: rgba(0, 0, 255, 0.25);*/
+        width: 70%;
+        min-height: 10em;
+        max-height: 20emvh;
+        margin-left: 5%;
+        margin-right: 5%;
+        overflow-y: auto;
+        margin-bottom: 1em;
+    }
+}

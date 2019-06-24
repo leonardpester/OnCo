@@ -1,0 +1,227 @@
+
+
+
+
+.main {
+
+    height: 100vw;
+    width: 60%;
+    overflow-x: hidden;
+    background:   rgb(233, 235, 238) ;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom: auto;;
+    position:relative;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.6);
+    
+}
+.mainInf{
+    
+    min-height:100vw;
+    width: 75%;
+    text-align: center;
+    margin-top:auto;
+    margin-bottom: auto;
+    background:   rgb(233, 235, 238) ;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.6);
+
+}
+body {
+    background: #D5A235;
+}
+#topsTd {
+
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#tops {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    
+}
+#font{
+    min-height: 7vw;
+    box-shadow: 1px 1px rgba(0,0,0,1);
+    background-color: #565e3623;
+   
+    width:  100%;
+    margin-top: -2em;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    margin-bottom: 2em;
+}
+.fontTextNume{
+
+    font-family: 'Hind Siliguri', sans-serif;
+    text-align: center;
+    font-size: 3em;
+}
+.fontText{
+
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: center;
+    size: 30;
+}
+.inline{
+    display:inline-block;
+    height: 30%;
+    font-family: 'Libre Franklin', sans-serif;
+    text-align:top;
+    margin-left:auto;
+    margin-right:auto;
+}
+#imagine{
+    width: 50%;
+    text-align:center;
+    height:35em;
+    margin-left: auto;
+    margin-right:auto;
+    
+    vertical-align:top;
+}
+#infDeBaza{
+    width: 22em;
+    height:11em;
+    margin-bottom: 1em;
+    position: relative;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.6);
+    background-color: #5a613f0a;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom:1em;
+    padding-bottom: 1em;;
+    font-size:25;
+    
+}
+#alteImagini{
+    display: inline-block;
+    text-align:center;
+    margin-left:auto;
+    position: relative;
+    margin-right:auto;
+    height: 10em;
+    
+    margin-top:auto;
+    margin-bottom: auto;
+    vertical-align: top;
+}
+    
+.alt{
+
+    display: inline-block;
+    
+}
+.jos{
+   
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: center;  
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.6);   
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    text-align: center;
+    width:auto;
+    
+}
+#alteInf{
+    min-height:28vw;
+    background-color: #5a613f0a;
+    position: relative;
+    font-size:25;
+    margin-top:1em;
+    margin-bottom:auto;
+    text-align:center;
+}
+#comentarii{
+    min-height:28vw;
+    
+    background-color: #5a613f0a;
+    padding-top:1px;
+    padding-bottom: 25px;;
+    font-size:25;
+}
+.co{
+
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.6);
+    padding-top:5px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 5px;;
+    width: 100%;
+}
+
+#addCom{
+
+    height:3em;
+    width: 70%;
+    display: inline-block;
+    position:relative;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+#text{
+   
+    padding-left:auto;
+    padding-right: auto;
+    width: 93.5%;
+    height: 100%;
+    margin-left:auto;
+    margin-right: auto;
+    text-align:center
+}
+.jos1{
+    display:inline-block;
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: center;  
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.6);
+    margin-left: auto;
+    margin-top: 1em;
+    width:60%;
+    
+    position: absolute;
+}
+.buton{
+    display: inline-block;
+    width: 6.1%;
+    height: 100%;
+    position: relative;
+    
+}
+.lista{
+    padding-top:0.7em;
+    padding-left:3em;
+    position: relative;
+    text-align: left;
+    font-size :22;
+}
+.lista1{
+    padding-top:1em;
+    padding-left:0.8em;
+    text-align: left;
+    font-size :17;
+}
+#lin{
+    display: inline-block;
+    
+    position: relative;
+    
+}
+.inp{
+
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.6);
+    padding-top:5px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 5px;;
+    width: 93.22%;
+    height: 100%;
+}
